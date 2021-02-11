@@ -1,38 +1,178 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.calculator {
+  height: fit-content;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid black;
+  box-shadow: 6px 7px 9px 2px rgba(97,97,97,0.53); ;
+}
+
+.result {
+  border: 3px solid black;
+  background-color: rgb(157, 157, 255);
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 0;
+  gap: 15px;
+  text-align: end;
+  /* gap: 10px; */
 }
 
-.App-link {
-  color: #61dafb;
+.operation, .display {
+  padding-right: 20px;
+  height: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ac {
+  grid-area: ac;
+  background-color: rgb(253, 99, 99);
 }
+
+.b1 {
+  grid-area: b1;
+}
+
+.b2 {
+  grid-area: b2;
+}
+
+.b3 {
+  grid-area: b3;
+}
+
+.b4 {
+  grid-area: b4;
+}
+
+.b5 {
+  grid-area: b5;
+}
+
+.b6 {
+  grid-area: b6;
+}
+
+.b7 {
+  grid-area: b7;
+}
+
+.b8 {
+  grid-area: b8;
+}
+
+.b9 {
+  grid-area: b9;
+}
+
+.b10 {
+  grid-area: b10;
+}
+
+.b11 {
+  grid-area: b11;
+}
+
+.b12 {
+  grid-area: b12;
+}
+
+.b13 {
+  grid-area: b13;
+}
+
+.eq {
+  grid-area: eq;
+  background-color: rgb(78, 148, 192);
+}
+
+.b15 {
+  grid-area: b15;
+}
+
+.b16 {
+  grid-area: b16;
+}
+
+.n, .p {
+  background-color: rgb(221, 219, 219);
+}
+
+.o {
+  background-color: rgb(255, 255, 179);
+}
+
+.button-items {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 70px 70px 70px 70px 70px;
+  grid-template-areas: 
+    "ac ac b1 b2"
+    "b3 b4 b5 b6"
+    "b7 b8 b9 b10"
+    "b11 b12 b13 eq"
+    "b15 b15 b16 eq"
+  ;
+}
+
+.button-items * {
+  border: 1px solid black;
+}
+
+.button-items button:nth-child(-n+3) {
+  border-top: 3px solid black;
+}
+
+.button-items button:nth-last-child(-n+3) {
+  border-bottom: 3px solid black;
+}
+
+.button-items button:nth-child(3) {
+  border-right: 3px solid black;
+}
+
+.button-items button:nth-child(4n+7) {
+  border-right: 3px solid black;
+}
+
+.button-items button:nth-child(1) {
+  border-left: 3px solid black;
+}
+
+.button-items button:nth-child(4n+4) {
+  border-left: 3px solid black;
+}
+
+
+button {
+  padding: 0;
+}
+
+button:active {
+  background-color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  /* transform: scale(1.05);
+  transition: 2s; */
+}
+
